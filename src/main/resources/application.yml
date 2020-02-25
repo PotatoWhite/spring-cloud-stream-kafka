@@ -1,0 +1,12 @@
+spring.cloud.stream.bindings:
+  input:
+    destination: topic01
+    use-native-decoding: true
+  output:
+    destination: topic02
+    use-native-decoding: true
+
+spring:
+  kafka:
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
